@@ -10,21 +10,19 @@
 
 ### 二维码数据格式
 
-```
-{
-    protocol	string	// 协议名称，赋值为 StandardEOSWallet
-    version		string	// 协议版本号
-    action		string	// 操作类型
-    action_id	string	// 本次操作唯一ID
-    expired		integer	// 操作过期时间戳，单位秒
-    data		object	// 操作参数
-    memo		string	// 请求说明信息
-    callback	string	// 操作回调接口链接
-    dapp 		object	// 包含两个参数
-    					// name dapp名称
-    					// icon dapp logo链接
-}
-```
+采用`json`格式，字段如下：
+
+|   参数    |  类型   |                           说明                           |
+| :-------: | :-----: | :------------------------------------------------------: |
+| protocol  | string  |            协议名称，赋值为 StandardEOSWallet            |
+|  version  | string  |                        协议版本号                        |
+|  action   | string  |                         操作类型                         |
+| action_id | string  |                      本次操作唯一ID                      |
+|  expired  | integer |                  操作过期时间戳，单位秒                  |
+|   data    | object  |                         操作参数                         |
+|   memo    | string  |                       请求说明信息                       |
+| callback  | string  |                     操作回调接口链接                     |
+|   dapp    | object  | 包含两个参数：name 和 icon，分别为 dapp 名称和 logo 链接 |
 
 ### 回调接口公共请求参数
 
@@ -169,4 +167,3 @@ sign = ecc.sign(data, privateKey)
 |      参数      |  类型  |  说明  |
 | :------------: | :----: | :----: |
 | transaction_id | string | 交易ID |
-
