@@ -30,26 +30,22 @@
 
 > 调用所有回调接口都需要传这些参数
 
-```
-{
-    protocol	string	// 协议名称，赋值为 StandardEOSWallet
-    version		string	// 协议版本号
-    action		string	// 操作类型
-    action_id	string	// 本次操作唯一ID
-    account		string	// 操作eos账号
-    timestamp	integer	// 操作时间戳，单位秒
-    source		string	// 来源钱包名称，如MoreWallet
-}
-```
+|   参数    |  类型   |                说明                |
+| :-------: | :-----: | :--------------------------------: |
+| protocol  | string  | 协议名称，赋值为 StandardEOSWallet |
+|  version  | string  |             协议版本号             |
+|  action   | string  |              操作类型              |
+| action_id | string  |           本次操作唯一ID           |
+|  account  | string  |            操作eos账号             |
+| timestamp | integer |         操作时间戳，单位秒         |
+|  source   | string  |     来源钱包名称，如MoreWallet     |
 
 ### 回调接口返回参数
 
-```
-{
-    code		integer		// code=0表示成功 其他值表示失败
-    message		string		// 错误信息
-}
-```
+|  参数   |  类型   |             说明              |
+| :-----: | :-----: | :---------------------------: |
+|  code   | integer | code=0表示成功 其他值表示失败 |
+| message | string  |           错误信息            |
 
 ## 登录
 
@@ -82,11 +78,9 @@ sign = ecc.sign(data, privateKey)
 
 ### 回调接口请求参数
 
-```
-{
-    sign	string	// 上一步获取的签名
-}
-```
+| 参数 |  类型  |       说明       |
+| :--: | :----: | :--------------: |
+| sign | string | 上一步获取的签名 |
 
 ## 转账
 
@@ -117,11 +111,9 @@ sign = ecc.sign(data, privateKey)
 
 ### 回调接口请求参数
 
-```
-{
-    transaction_id	string // 交易ID
-}
-```
+|      参数      |  类型  |  说明  |
+| :------------: | :----: | :----: |
+| transaction_id | string | 交易ID |
 
 ## 提交transaction
 
@@ -174,9 +166,7 @@ sign = ecc.sign(data, privateKey)
 
 ### 回调接口请求参数
 
-```
-{
-    transaction_id	string // 交易ID
-}
-```
+|      参数      |  类型  |  说明  |
+| :------------: | :----: | :----: |
+| transaction_id | string | 交易ID |
 
