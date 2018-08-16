@@ -10,7 +10,7 @@
 
 ### 二维码数据格式
 
-```json
+```
 {
     protocol	string	// 协议名称，赋值为 StandardEOSWallet
     version		string	// 协议版本号
@@ -30,7 +30,7 @@
 
 > 调用所有回调接口都需要传这些参数
 
-```json
+```
 {
     protocol	string	// 协议名称，赋值为 StandardEOSWallet
     version		string	// 协议版本号
@@ -44,7 +44,7 @@
 
 ### 回调接口返回参数
 
-```json
+```
 {
     code		integer		// code=0表示成功 其他值表示失败
     message		string		// 错误信息
@@ -82,7 +82,7 @@ sign = ecc.sign(data, privateKey)
 
 ### 回调接口请求参数
 
-```json
+```
 {
     sign	string	// 上一步获取的签名
 }
@@ -117,7 +117,7 @@ sign = ecc.sign(data, privateKey)
 
 ### 回调接口请求参数
 
-```json
+```
 {
     transaction_id	string // 交易ID
 }
@@ -136,30 +136,30 @@ sign = ecc.sign(data, privateKey)
     "expired": 1534347099,
     "data": {
         "actions": [{
-            account: "eosio",
-            name: "buyram",
-            authorization: [{
-                actor: "demouser1111",
-            	permission: "active"
+            "account": "eosio",
+            "name": "buyram",
+            "authorization": [{
+                "actor": "demouser1111",
+            	"permission": "active"
             }],
-            data: {
-                payer: "demouser1111",
-            	receiver: "demouser1111",
-            	quant: "10.0000 EOS"
+            "data": {
+                "payer": "demouser1111",
+            	"receiver": "demouser1111",
+            	"quant": "10.0000 EOS"
           	}
         }, {
-            account: "eosio",
-            name: "delegatebw",
-            authorization: [{
-            	actor: "demouser1111",
-            	permission: "active"
+            "account": "eosio",
+            "name": "delegatebw",
+            "authorization": [{
+            	"actor": "demouser1111",
+            	"permission": "active"
             }],
-            data: {
-            	from: "demouser1111",
-            	receiver: "demouser1111",
-            	stake_net_quantity: "10.0000 EOS",
-            	stake_cpu_quantity: "5.0000 EOS",
-            	transfer: false
+            "data": {
+            	"from": "demouser1111",
+            	"receiver": "demouser1111",
+            	"stake_net_quantity": "10.0000 EOS",
+            	"stake_cpu_quantity": "5.0000 EOS",
+            	"transfer": false
             }
         }]
     },
@@ -174,7 +174,7 @@ sign = ecc.sign(data, privateKey)
 
 ### 回调接口请求参数
 
-```json
+```
 {
     transaction_id	string // 交易ID
 }
