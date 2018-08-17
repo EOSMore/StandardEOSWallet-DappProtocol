@@ -71,7 +71,7 @@
 
 ```javascript
 // 生成sign算法
-let data = timestamp + account + uuid + source // source为钱包名，标示来源
+let data = timestamp + account + action_id + source // source为钱包名，标示来源
 sign = ecc.sign(data, privateKey)
 ```
 
