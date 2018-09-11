@@ -6,6 +6,8 @@
 
 支持平台：WEB端
 
+[English](https://github.com/EOSMore/StandardEOSWallet-DappProtocol/blob/master/Readme.md)
+
 ## 数据格式
 
 ### 二维码数据格式
